@@ -1,0 +1,9 @@
+version: '3.1'
+services:
+  gunicorn:
+    image: api_gunicorn:latest
+    restart: "no"
+    volumes:
+      - ./src/static:/opt/src/static/
+    ports:
+      - "8002:8000"
