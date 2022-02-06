@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'account',
     'project',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -125,4 +126,7 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.BasicAuthentication',
         'rest_framework.authentication.SessionAuthentication',
     ]
+}
+SWAGGER_SETTINGS = {
+    'USE_SESSION_AUTH': False
 }
